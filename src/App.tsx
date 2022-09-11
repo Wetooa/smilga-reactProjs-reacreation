@@ -1,52 +1,28 @@
 import React from "react";
-import PageFrames from "./components/PageFrames";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage/Homepage";
 import BirthdayReminder from "./pages/Birthday Reminder/BirthdayReminder";
 import Tours from "./pages/Tours/Tours";
-
-const pages = [
-  {
-    pageName: "Birthday Reminder",
-  },
-  {
-    pageName: "Tours",
-  },
-  {
-    pageName: "Reviews",
-  },
-  {
-    pageName: "Accordion",
-  },
-  {
-    pageName: "Menu",
-  },
-  {
-    pageName: "Tabs",
-  },
-];
+import Reviews from "./pages/Reviews/Reviews";
+import Accordion from "./pages/Accordion/Accordion";
+import Menu from "./pages/Menu/Menu";
+import Tabs from "./pages/Tabs/Tabs";
 
 function App() {
   return (
-    <div className="scroll-smooth transition-all duration-500">
-      <div className="flex align-middle text-center items-center bg-gray-900 text-blue-400 text-3xl font-bold h-48 justify-center">
-        <p>React Projects</p>
-      </div>
-      <div className="flex items-center justify-center mt-10 flex-col">
-        <a href="#sec" className="bg-sky-300 p-2 rounded-lg">
-          Start Course
-        </a>
-        <h2 className="underline underline-offset-2 font-bold text-3xl mt-6 bg-sky-200 p-1">
-          Basic Projects
-        </h2>
-        <div
-          id="sec"
-          className="flex items-center text-center justify-center mt-8 w-8/12 gap-5 flex-wrap"
-        >
-          {pages.map((page) => {
-            return <PageFrames key={page.pageName} {...page} />;
-          })}
-        </div>
-      </div>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/birthday-reminder" element={<BirthdayReminder />} />
+          <Route path="/tours" element={<Tours />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/accordion" element={<Accordion />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/tabs" element={<Tabs />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
