@@ -7,7 +7,7 @@ type PageFramesProps = {
 
 function PageFrames(props: PageFramesProps) {
   return (
-    <div className="group relative w-52 h-48 overflow-hidden shadow-lg hover:opacity-75 transition-all duration-500 hover:shadow-2xl">
+    <div className="group relative w-52 h-48 overflow-hidden shadow-lg hover:opacity-75 transition-all duration-500 hover:shadow-2xl  cursor-pointer rounded-md">
       <img
         src={CatImage}
         alt="cat"
