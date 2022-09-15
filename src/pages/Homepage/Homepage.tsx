@@ -48,10 +48,10 @@ function Homepage() {
             id="sec"
             className="flex items-center text-center justify-center mt-8 w-8/12 gap-5 flex-wrap"
           >
-            {pages.map((page) => {
+            {pages.map((page, index) => {
               return (
                 <div onClick={() => navigate(`${page.path}`)}>
-                  <PageFrames key={page.pageName} {...page} />
+                  <PageFrames key={index} {...page} />
                 </div>
               );
             })}

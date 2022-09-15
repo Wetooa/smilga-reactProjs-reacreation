@@ -6,7 +6,7 @@ import BirthdayFrame from "./components/BirthdayFrame";
 function BirthdayReminder() {
   const [people, setPeople] = useState(data);
   return (
-    <body className="bg-pink-300">
+    <body className="w-screen h-screen bg-pink-300">
       <div className=" flex justify-center ">
         <div className="bg-white w-6/12 shadow-xl flex flex-col items-start m-10 rounded-lg">
           <p className="text-xl font-bold m-4">
